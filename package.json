@@ -1,0 +1,19 @@
+{
+  "name": "yys-demo",
+  "version": "1.0.0",
+  "description": "yys-demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitzsq/yys-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitzsq/yys-demo/issues"
+  },
+  "homepage": "https://github.com/gitzsq/yys-demo"
+}
