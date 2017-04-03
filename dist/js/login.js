@@ -1,1 +1,1 @@
-$("#btn").click(function(){alert("小强老湿，你再点一次试试")});
+$(function(){$("#btn").click(function(){$(".log_ss").toggle()}),$("#back").click(function(){history.go(-1)})});

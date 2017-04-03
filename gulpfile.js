@@ -70,21 +70,45 @@ gulp.task('mainCss',function () {
         .pipe(gulp.dest('css'));
 });
 
-//检测文件变化
-gulp.task('watch', function () {
-    gulp.watch(['./www/*.html'], ['html']);
-});
 //使用connect启动一个Web服务器
 gulp.task('connect', function () {
     connect.server({
-        root: 'yys-demo',
+        root: 'local',
         port: 8080,
         livereload: true
     });
 });
 
+//先编译less文件，然后在自动刷新
+gulp.task('serve',['less'], function() {
+
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch('less/**/*.less', ['less']);
+    gulp.watch('index.html').on('change',browserSync.reload());
+    gulp.watch('**/*.html').on('change', browserSync.reload);
+    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+
+});
+
+//开启静态服务
+gulp.task('serve', function() {
+
+    browserSync.init({
+        server: "./"
+    });
+    // gulp.watch('index.html').on('change',browserSync.reload());
+    gulp.watch('css/*.css').on('change', browserSync.reload);
+    gulp.watch('**/*.html').on('change', browserSync.reload);
+    gulp.watch('js/**/*.js').on('change', browserSync.reload);
+
+});
+
+
 //默认任务
 gulp.task('default',function (done) {
-    Runsequence(['minJs','minCss','minHtml','less','vendor','mainCss','watch','connect'],
+    Runsequence(['minJs','minCss','minHtml','less','vendor','mainCss','connect','serve'],
         done);
 });
