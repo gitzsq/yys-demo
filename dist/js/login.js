@@ -1,0 +1,1 @@
+$("#btn").click(function(){alert("小强老湿，你再点一次试试")});

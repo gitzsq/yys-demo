@@ -1,0 +1,1 @@
+$("#dan").click(function(){alert("别点我了！it   is    dangerous")});
