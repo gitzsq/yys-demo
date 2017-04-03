@@ -1,0 +1,15 @@
+{
+  "name": "yys-demo",
+  "description": "yys",
+  "main": "index.js",
+  "authors": [
+    "zsq"
+  ],
+  "license": "ISC",
+  "homepage": "localhost:8080/yys-demo/index.html",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "jquery.cookie": "^1.4.1"
+  }
+}
