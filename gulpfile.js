@@ -56,16 +56,11 @@ gulp.task('vendor',function () {
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/jquery.cookie/jquery.cookie.js',
-        'bower_components/jquery.lazyload/jquery.lazyload.js',
-        'www/scripts/jquery-qrcode-0.14.0.min.js',
-        'bower_components/arg.js/dist/arg-1.3.min.js',
-        //'bower_components/socket.io-client/socket.io.js',
         'bower_components/toastr/toastr.min.js',
-        'bower_components/underscore/underscore-min.js',
-        'bower_components/async/dist/async.min.js'
+        'bower_components/underscore/underscore-min.js'
     ]).pipe(concat('vendor.js'))
         .pipe(gulpif(production, uglify()))
-        .pipe(gulp.dest('build/js'));
+        .pipe(gulp.dest('js/'));
 });
 
 
