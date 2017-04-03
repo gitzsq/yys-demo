@@ -55,10 +55,8 @@ gulp.task('less',function () {
 gulp.task('vendor',function () {
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/waypoints/lib/jquery.waypoints.min.js',
         'bower_components/jquery.cookie/jquery.cookie.js',
         'bower_components/jquery.lazyload/jquery.lazyload.js',
-        'bower_components/swiper/dist/js/swiper.jquery.min.js',
         'www/scripts/jquery-qrcode-0.14.0.min.js',
         'bower_components/arg.js/dist/arg-1.3.min.js',
         //'bower_components/socket.io-client/socket.io.js',
